@@ -12,7 +12,7 @@
   <meta name="description" content="《踢人者》是一个整活戏仿德国足球杂志《踢球者》的足球资讯网站。本站主要关注亚洲旅欧球员以及亚洲顶尖球员。所有文章都是个人观点，前后不统一也很正常。 联系: chuishenx@oblivionocean.top">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
-<meta property="og:url" content="https://kickmen.top/About/index.html">
+<meta property="og:url" content="https://kickmen.top/about/index.html">
 <meta property="og:site_name" content="KICKMEN">
 <meta property="og:description" content="《踢人者》是一个整活戏仿德国足球杂志《踢球者》的足球资讯网站。本站主要关注亚洲旅欧球员以及亚洲顶尖球员。所有文章都是个人观点，前后不统一也很正常。 联系: chuishenx@oblivionocean.top">
 <meta property="og:locale" content="zh_CN">
@@ -59,10 +59,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -123,17 +145,13 @@
     
     <div class="article-meta">
       
-	<a href="/About/index.html" class="article-date">
-	  <time datetime="2026-01-21T15:35:58.000Z" itemprop="datePublished">一月 21, 2026</time>
-	</a>
-
        
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p>《踢人者》是一个整活戏仿德国足球杂志《踢球者》的足球资讯网站。本站主要关注<em>亚洲旅欧球员</em>以及<em>亚洲顶尖球员</em>。所有文章都是个人观点，前后不统一也很正常。</p>
-<p>联系: <a href="mailto:&#99;&#104;&#x75;&#x69;&#115;&#x68;&#x65;&#110;&#120;&#x40;&#111;&#98;&#108;&#105;&#x76;&#x69;&#x6f;&#110;&#x6f;&#99;&#x65;&#x61;&#110;&#46;&#x74;&#x6f;&#x70;">chuishenx@oblivionocean.top</a></p>
+<p>联系: <a href="mailto:&#99;&#104;&#117;&#x69;&#115;&#x68;&#x65;&#x6e;&#120;&#x40;&#111;&#x62;&#x6c;&#105;&#x76;&#105;&#111;&#x6e;&#111;&#x63;&#x65;&#97;&#110;&#x2e;&#x74;&#111;&#x70;">chuishenx@oblivionocean.top</a></p>
 
       
     </div>
@@ -322,6 +340,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
